@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>mini-vue</title>
+	<script type="text/javascript" src="./dep.js"></script>
+	<script type="text/javascript" src="./observer.js"></script>
+	<script type="text/javascript" src="./watcher.js"></script>
+	<script type="text/javascript" src="./compile.js"></script>
+	<script type="text/javascript" src="./vue.js"></script>
+	<style>
+		#root {
+			padding: 20px;
+			border: 1px solid red
+		}
+	</style>
+</head>
+
+<body>
+	<div id="root">
+		<div>{{title}}</div>
+		<div>
+			<p>
+				{{title}}
+			</p>
+			<div v-text="title"></div>
+		</div>
+		<input class="xxx" type="text" v-model="title">
+	</div>
+	<script type="text/javascript">
+		var vm= new Vue({
+			el: 'root',
+			data: {
+				title: '123'
+			}
+		});
+	</script>
+</body>
+
+</html>
